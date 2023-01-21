@@ -57,7 +57,7 @@ export default function LightBox({images, showMiniuature = false}: LightBoxProps
                         return (
                             <div className={"hover:cursor-pointer"} onClick={() => handleOpenModal(image, key)}
                                  key={key}>
-                                <img className={"h-full object-cover"} src={image.img} alt={image.title}/>
+                                <img className={"lg:h-full object-cover"} src={image.img} alt={image.title}/>
                             </div>);
                     })
                 }
