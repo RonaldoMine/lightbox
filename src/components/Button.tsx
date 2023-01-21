@@ -3,11 +3,11 @@ import React, {Fragment} from "react";
 
 interface ButtonProps {
     onClick: any,
-    isVisible: boolean,
+    isVisible?: boolean,
     children: React.ReactNode
 }
 
-export default function Button({onClick, isVisible, children}: ButtonProps) {
+export default function Button({onClick, isVisible = true, children}: ButtonProps) {
     return (<Transition
         as={Fragment}
         show={isVisible}
