@@ -10,10 +10,10 @@ interface ImageInterface {
 
 interface LightBoxProps {
     images: ImageInterface[],
-    showMiniuature?: boolean
+    showThumbnail?: boolean
 }
 
-export default function LightBox({images, showMiniuature = false}: LightBoxProps) {
+export default function LightBox({images, showThumbnail = false}: LightBoxProps) {
     let [isOpen, setIsOpen] = useState(false);
     let [currentImage, setCurrentImage] = useState({img: images[0].img, title: images[0].img, index: 0})
 
@@ -113,7 +113,7 @@ export default function LightBox({images, showMiniuature = false}: LightBoxProps
                                         </div>
                                     </div>
                                     {
-                                        showMiniuature && (
+                                        showThumbnail && (
                                             <div className={"w-10/12 mx-auto"}>
                                                 <div className={"flex flex-wrap justify-center items-center gap-2 mt-2"}>
                                                     {

@@ -48,7 +48,7 @@ function App() {
     ]
     return (
         <>
-            <LightBox showMiniuature={true} images={images}/>
+            <LightBox showThumbnail={true} images={images}/>
         </>
     );
 }
